@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!-- Document type declaration for HTML5 -->
+<html>
+  <head>
+    <title>cart QTY</title>
+  </head>
+  <body>
+    <button onclick="
+      console.log(`Cart Quantity: ${cartQuantity}`); // Log the initial cart quantity
+      ">Show Quantity</button>
+    <button onclick="
+      cartQuantity++; // Increment cart quantity by 1
+      console.log(`Cart Quantity: ${cartQuantity}`); // Log the updated cart quantity
+    ">Add to cart</button>
+    <button onclick="
+      cartQuantity += 2; // Increment cart quantity by 2
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">+2</button>
+    <button onclick="
+    cartQuantity += 3
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">+3</button>
+    <button onclick="
+    cartQuantity = cartQuantity + 4
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">+4</button>
+    <button onclick="
+    cartQuantity = cartQuantity + 5
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">+5</button>
+    <button onclick="
+      cartQuantity = cartQuantity = 0; // Reset cart quantity to 0
+      console.log('Cart was reset'); // Log the reset action
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">Reset Cart</button>
+    <button onclick="
+      cartQuantity = cartQuantity - 1; // Decrement cart quantity by 1
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">Remove from Cart</button>
+    <button onclick="
+      cartQuantity -= 2; // Decrement cart quantity by 1
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">-2</button>
+    <button onclick="
+      cartQuantity -= 3; // Decrement cart quantity by 1
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    ">-3</button>
+    <script>
+      let cartQuantity = 0; // Initialize cart quantity to 0
+    </script>
+  </body>

@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- Document type declaration for HTML5 -->
+<html>
+  <head>
+    <title>Amazon</title>
+  </head>
+  <body>
+
+    <script>
+      basketball = {
+        name: 'basketball',
+        price: 2095,
+        'delivery-time': '3 days',
+        };
+
+      shirt = {
+        name: 'Shirt',
+        price: 1090,
+        'delivery-time': '1 day',
+      }
+      shirt1 = {
+        name: 'shirt',
+        price: 1090,
+        'delivery-time': '1 day',
+
+      };
+      console.log(basketball);
+      console.log(shirt);
+
+      basketball.price += 500;
+      console.log(basketball);
+
+      function comparePrice(basketball, shirt) {
+        if (basketball.price > shirt.price) {
+          console.log('Basketball is more expensive than shirt');
+        } else if (basketball.price < shirt.price) {
+          console.log('Shirt is more expensive than basketball');
+        } else {
+          console.log('Both are same price');
+        }
+      }
+      console.log (comparePrice(basketball, shirt));
+
+    function isSameProduct(shirt, shirt1) {
+      if (shirt.name === shirt1.name && shirt.price === shirt1.price) {
+        console.log('Both are same product');
+      } else {
+        console.log('Both are different products');
+      }
+    } 
+    console.log(isSameProduct(shirt, shirt1));
+
+    console.log(shirt.name);
+    shirt.name = shirt.name.toLowerCase();
+    console.log(shirt.name);
+
+    const repeat = "test";
+    console.log(repeat.repeat(3));
+    </script>
+  </body>

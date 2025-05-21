@@ -1,0 +1,45 @@
+<!DOCTYPE html> <!-- Document type declaration for HTML5 -->
+<html>
+  <head>
+    <title>HTML CSS review</title>
+      <style>
+        /* This is a CSS comment. It explains the styles below */
+        body { /* Selector for the body element */
+          font-family: Arial, sans-serif; /* Font family for the body text */
+          background-color: #f0f0f0; /* Background color for the body */
+          margin: 20px; /* Margin around the body content */
+        }
+        .red-button { /* Class selector for the button */
+        background-color: red; /* Background color of the button */
+        color: white; /* Text color for the button */
+        border: none; /* Remove border */
+      }
+        .yellow-button { /* Class selector for another button */
+        background-color: yellow; /* Background color of the button */
+      }
+      </style>
+  </head>
+  <body>
+    <! -- This is the body of the HTML document -->
+    <button title="good job" class="red-button" onclick="
+        alert('good job'); /* Alert message when the button is clicked */
+      ">
+      hello 
+    </button>
+
+    <p>paragraph of <button 
+      class="yellow-button">hello</button> text
+    </p>
+
+    <script>
+      // this is a comment. This is a JavaScript comment to explain the code below
+      // The following line will execute when the script is run
+      // alert("hello") ->>>>> not to pop up every time loading browser.
+
+      /* This is a multi-line comment in JavaScript. 
+         It can span multiple lines and is used to explain the code below. */
+      // The following line will execute when the script is run, but it is commented out to prevent it from executing.
+      console.log("2+2"); /* This will log '2+2' to the console when the script runs. */
+      console.log('some text'); /* This will log 'some text' to the console when the script runs. */
+    </script>
+  </body>

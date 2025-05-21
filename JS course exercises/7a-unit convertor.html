@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7a exercise</title>
+  </head>
+  <body>
+    <script>
+      /* great('Herman');
+      great('raizy');
+      great();
+      function great(name) {
+        console.log(`Hello ${name}`);
+        if (!name) {
+          console.log('Hi there!');
+        }
+      }
+      */
+      function convertToFareheit(celsius) {
+        let fareheit = (celsius * 9) / 5 + 32;
+        console.log(`The temperature in fareheit is ${fareheit}`);
+      }
+      function convertToCelsius(fareheit) {
+        let celsius = ((fareheit - 32) * 5) / 9;
+        console.log(`The temperature in celsius is ${celsius}`);
+      }
+      convertToFareheit(25);
+      convertToCelsius(86);
+
+      function convertTemperature(degrees, unit) {
+        if (unit === 'C') {
+          convertToFareheit(degrees);
+        } else if (unit === 'F') {
+          convertToCelsius(degrees);
+        }
+      }
+      convertTemperature(25, 'C');
+      convertTemperature(86, 'F');
+      
+      function convertLength(length, from, to) {
+        let result;
+        if (from === 'miles' && to === 'km') {
+          result = length * 1.6;
+          console.log(`The length in km is ${result}`);
+        } else if (from === 'km' && to === 'miles') {
+          result = length / 1.6;
+          console.log(`The length in miles is ${result}`);
+        } else if (from === 'miles' && to === 'ft') {
+          result = length * 5280;
+          console.log(`The length in feet is ${result}`);
+        } else if (from === 'ft' && to === 'miles') {
+          result = length / 5280;
+          console.log(`The length in miles is ${result}`);
+        } else if (from === 'km' && to === 'ft') {
+          result = length * 3280.84;
+          console.log(`The length in feet is ${result}`);
+        } else if (from === 'ft' && to === 'km') {
+          result = length / 3280.84;
+          console.log(`The length in km is ${result}`);
+        } else {
+          console.log('Invalid units');
+        }
+      }
+
+      convertLength(50, 'miles', 'km'); //=> '80 km'
+      convertLength(32, 'km', 'miles'); //=> '20 miles'
+      convertLength(100, 'miles', 'miles'); //=> 'Invalid units'
+      convertLength(5, 'miles', 'ft'); //=> '26400 ft'
+      convertLength(5, 'km', 'ft'); //=> '16404.2 ft'
+      convertLength(5, 'lbs', 'lbs') //=> 'Invalid units'
+
+    </script>
+  </body>
+</html>

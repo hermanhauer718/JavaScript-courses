@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Coin Flip</title>
+  </head>
+
+  <body>
+    <script>
+      const CoinFlip = Math.random()  
+
+      const result = CoinFlip < 0.5 ? 'Heads' : 'Tails';
+      // console.log(result);
+
+      const guess = 'Heads';
+
+      if (result === guess) {
+        console.log(`You guessed ${guess} and it was ${result}. You win!`);
+      } else {
+        console.log(`You guessed ${guess} and it was ${result}. You lose!`);
+      }
+    </script>
+  </body>
+</html>
