@@ -8,6 +8,7 @@
       Calculator
     </p>
     <p>
+
       <button onclick="
         updateCalculation('1');
         ">1</button>
@@ -81,15 +82,37 @@
     </p>
 
     <script>
-      let calculation = '';
+      let calculation = localStorage.getItem('calculation');
+      if (calculation) {
+        calculation = JSON.parse(calculation);
+      } else {
+        calculation = '';
+      }
 
       function updateCalculation(value) {
         calculation += value;
         console.log(calculation);
+        
       }
+      localStorage.setItem('calculation', JSON.stringify(calculation));
+      console.log(calculation);
 
+      /*
+      >>> from copilot - explaining what needs to be done in order to get the calculator to show the saved caluclation value <<<
+      
+      Looking at the calculator code, there are a couple of issues preventing the current calculation from being displayed:
 
-      // NEED TO DO 8h - LOCAL STORAGE
+      The calculation value is not being displayed anywhere in the HTML - it's only being logged to the console. To show the current calculation to the user, you'll need to add a display element.
+
+      The localStorage saving logic is outside the updateCalculation() function, so it only runs once when the page loads rather than updating each time the calculation changes.
+
+      Here's how to fix these issues:
+
+      First, add a display element to show the calculation:
+      Then modify the updateCalculation function to update both the display and localStorage:
+      Also add this after the initial calculation setup to show the starting value:
+      These changes will make the calculator display the current calculation on screen instead of just logging to the console.
+      */
 
     </script>
 
