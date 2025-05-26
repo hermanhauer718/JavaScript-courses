@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>9a DOMO exercises</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="button-9b">9b</button>
+  <p></p>
+  <button onclick="
+    headsTails('Heads');
+  ">Heads</button>
+  <button onclick="
+    headsTails('Tails');
+  ">Tails</button>
+  <p class="Heads-tails"></p>
+  <input placeholder="Your Name" onkeydown="
+        handleCostKeydown(event);
+    ">
+  <button onclick="
+    submit();
+  ">Submit</button>
+  <p class="input-result"></p>
+
+  <script>
+
+    console.log(document.querySelector('button'));
+
+    console.log(document.querySelector('.button-9b')
+      .innerHTML = '9b Done');
+
+    function headsTails(name) {
+      document.querySelector('.Heads-tails')
+        .innerHTML = `You Chose: ${name}`;
+    }
+
+    function submit() {
+      const inputValue = document.querySelector('input').value;
+      document.querySelector('.input-result')
+        .innerHTML = `You entered: ${inputValue}`;
+    }
+
+    function handleCostKeydown(event) {
+      if (event.key === 'Enter') {
+        submit();
+      }
+    }
+
+  </script>
+
+</body>
+</html>

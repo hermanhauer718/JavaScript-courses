@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>9h</title>
+</head>
+<body>
+  <input class="input" onkeyup="
+    display();  
+  ">
+  <p class="display"></p>
+
+
+
+  <script>
+
+    function display() {
+      const input = document.querySelector('.input');
+      const displayElement = document.querySelector('.display');
+      displayElement.textContent = input.value;
+    }
+  </script>
+</body>
+</html>
