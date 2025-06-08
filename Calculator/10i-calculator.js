@@ -12,7 +12,9 @@ document.querySelector('.Calculation-display').textContent = `${calculation}`;
 
 function updateCalculation(value) {
   calculation += value;
-  document.querySelector('.Calculation-display').textContent = `${calculation}`;
+  // Replace division symbol with percentage for display only
+  const displayCalculation = calculation.replace(/\//g, '÷');
+  document.querySelector('.Calculation-display').textContent = displayCalculation;
   localStorage.setItem('calculation', JSON.stringify(calculation));
   console.log(calculation);
 }

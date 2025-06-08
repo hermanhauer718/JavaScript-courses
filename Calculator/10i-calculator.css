@@ -23,7 +23,7 @@
   width: 50px;
   border-radius: 60px;
   border: none;
-  font-size: 20px;
+  font-size: 25px;
   cursor: pointer;
   margin-right: 5px;
 }
@@ -42,4 +42,26 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: none;
+}
+.divide-button {
+  background-color: orange;
+  color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 60px;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.times-button {
+  background-color: orange;
+  color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 60px;
+  border: none;
+  font-size: 23px;
+  cursor: pointer;
+  margin-right: 5px;
 }
