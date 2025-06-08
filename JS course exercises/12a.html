@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>12a</title>
+</head>
+<body>
+  <!-- 12c, 12d -->
+  <button onclick="
+      startButtonClicked();
+    ">Start</button>
+
+  <!-- 12e -->
+<p></p>
+  <button onclick="
+      cartButtonClicked();
+    ">Add to cart</button>
+
+<p class="cart-button"></p>
+
+<p></p>
+<button class ="add" onclick="
+  add();
+">Add</button>
+<button class="remove" onclick="
+  remove();
+">Remove</button>
+
+  <script>
+    // 12a
+    const add1 = function() {
+      console.log(2 + 3);
+    };
+    add1();
+    add1();
+
+    // 12b
+    function runTwice(fun) {
+      fun();
+      fun();
+    };
+    runTwice(add1);
+
+    // 12c, 12d
+    function startButtonClicked() {
+        document.querySelector('button').innerText = 'Loading...';
+        setTimeout(function() {document.querySelector('button').innerText = 'Finished!';
+      }, 2000);
+    };
+
+    // 12e, 12f
+    let timeoutId;
+    function cartButtonClicked() {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      document.querySelector('.cart-button').innerText = 'Added';
+      timeoutId = setTimeout(function() {
+        document.querySelector('.cart-button').innerText = '';
+      }, 3000);
+    };
+
+    // 12g
+    let messages = 0;
+    document.title = `${messages} New messages`;
+    intervalId = setInterval(function() {
+      messages = 2;
+      document.title = `${messages} New messages`;
+    }, 2000);
+
+    // 12h
+    function add() {
+      messages++;
+      document.title = `${messages} New messages`;
+      clearInterval(intervalId);
+    };
+
+    function remove() {
+      messages--;
+      document.title = `${messages} New messages`;
+      clearInterval(intervalId);
+      if (messages < 0) {
+        messages = 0;
+        document.title = `App`;
+      }
+    };
+  </script>
+</body>
+</html>
